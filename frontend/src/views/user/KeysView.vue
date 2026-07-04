@@ -1417,18 +1417,7 @@ const closeModals = () => {
   }
 }
 
-// Show reset quota confirmation dialog
-const confirmResetQuota = () => {
-  showResetQuotaDialog.value = true
-}
 
-// Set expiration date based on quick select days
-const setExpirationDays = (days: number) => {
-  formData.value.expiration_preset = days.toString() as '7' | '30' | '90'
-  const expDate = new Date()
-  expDate.setDate(expDate.getDate() + days)
-  formData.value.expiration_date = formatDateTimeLocal(expDate.toISOString())
-}
 
 // Reset quota used for an API key
 const resetQuotaUsed = async () => {
@@ -1445,11 +1434,6 @@ const resetQuotaUsed = async () => {
     const errorMsg = error.response?.data?.detail || t('keys.failedToResetQuota')
     appStore.showError(errorMsg)
   }
-}
-
-// Show reset rate limit confirmation dialog (from edit modal)
-const confirmResetRateLimit = () => {
-  showResetRateLimitDialog.value = true
 }
 
 // Show reset rate limit confirmation dialog (from table row)
