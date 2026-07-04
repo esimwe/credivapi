@@ -24,7 +24,7 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 
 # Install dependencies first (better caching)
 COPY frontend/package.json frontend/pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --unsafe-perm --ignore-scripts && pnpm approve-builds --all 2>/dev/null || true && pnpm rebuild esbuild vue-demi 2>/dev/null || true
+RUN pnpm install --frozen-lockfile
 
 # Copy frontend source and build.
 # LegalDocumentView.vue (admin-compliance gate) build-time imports
