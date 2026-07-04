@@ -14,9 +14,9 @@ export default {
     heroSubtitle: 'Tek Key, Tüm AI Modelleri',
     heroDescription: 'Birden fazla aboneliği yönetmeye gerek yok. Tek bir API key ile Claude, GPT, Gemini ve daha fazlasına erişin',
     tags: {
-      subscriptionToApi: 'Abonelikten API\'ye',
-      stickySession: 'Oturum Sürekliliği',
-      realtimeBilling: 'Kullandıkça Öde'
+      subscriptionToApi: 'API Hizmetleri',
+      stickySession: '%99.9 Uptime',
+      realtimeBilling: 'Limitleri Sen Belirle'
     },
     // Pain points section
     painPoints: {
